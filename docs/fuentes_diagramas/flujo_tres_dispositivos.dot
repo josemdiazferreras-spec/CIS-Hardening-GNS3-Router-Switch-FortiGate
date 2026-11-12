@@ -1,0 +1,19 @@
+digraph Aud {
+  graph [rankdir=LR,bgcolor="white",pad="0.3",nodesep="0.3",ranksep="0.5"];
+  node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#b7c9d6",fillcolor="#edf6fb",margin="0.18,0.13"];
+  edge [color="#58859d", penwidth=2, arrowsize=0.7];
+  a [label="R1 + SW
+CISCO ORIGINAL
+8/14 → 14/14",fillcolor="#e8f2ff"];
+  b [label="Integración
+FortiGate y PC1",fillcolor="#fff1e5"];
+  c [label="Auditoría conjunta
+17/21"];
+  d [label="Aplicación automática
+20/21"];
+  e [label="Control alternativo TLS
+(sin strong-crypto)",fillcolor="#fff6dc"];
+  f [label="Auditoría actualizada
+21/21",fillcolor="#e6f6ec"];
+  a->b->c->d->e->f;
+}

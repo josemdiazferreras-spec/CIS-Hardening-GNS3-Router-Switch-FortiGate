@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-11-12T13:48:35-05:00",
+  "modo": "auditar",
+  "alcance": "21 controles seleccionados (7 por dispositivo). No constituye certificacion CIS.",
+  "nota": "Conservar informes antes/despues; no publicar contrasenas o running-config sin sanitizar.",
+  "dispositivos": {
+    "R1": {
+      "ip": "10.6.94.1",
+      "tipo": "Cisco IOS",
+      "guardado_en_nvram": null,
+      "antes": {
+        "http_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTP administrativo deshabilitado"
+        },
+        "https_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTPS administrativo deshabilitado (no requerido en este laboratorio)"
+        },
+        "console_timeout": {
+          "cumple": true,
+          "detalle": "Consola con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "vty_timeout": {
+          "cumple": true,
+          "detalle": "VTY con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "ssh_v2": {
+          "cumple": true,
+          "detalle": "SSH versión 2 habilitado"
+        },
+        "vty_ssh_only": {
+          "cumple": true,
+          "detalle": "Acceso remoto restringido a SSH"
+        },
+        "vty_local_login": {
+          "cumple": true,
+          "detalle": "VTY autenticada con usuarios locales"
+        }
+      }
+    },
+    "SW": {
+      "ip": "10.6.94.2",
+      "tipo": "Cisco IOS",
+      "guardado_en_nvram": null,
+      "antes": {
+        "http_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTP administrativo deshabilitado"
+        },
+        "https_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTPS administrativo deshabilitado (no requerido en este laboratorio)"
+        },
+        "console_timeout": {
+          "cumple": true,
+          "detalle": "Consola con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "vty_timeout": {
+          "cumple": true,
+          "detalle": "VTY con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "ssh_v2": {
+          "cumple": true,
+          "detalle": "SSH versión 2 habilitado"
+        },
+        "vty_ssh_only": {
+          "cumple": true,
+          "detalle": "Acceso remoto restringido a SSH"
+        },
+        "vty_local_login": {
+          "cumple": true,
+          "detalle": "VTY autenticada con usuarios locales"
+        }
+      }
+    },
+    "FW1": {
+      "ip": "10.6.94.3",
+      "tipo": "FortiOS 7.0.9",
+      "guardado_automatico": true,
+      "antes": {
+        "SSH version 1 deshabilitado": true,
+        "Telnet administrativo global deshabilitado": true,
+        "Cifrados TLS estaticos deshabilitados": true,
+        "Auditoria de comandos CLI habilitada": true,
+        "HTTP administrativo deshabilitado en port1": true,
+        "Tiempo de inactividad administrativo entre 1 y 10 minutos": true,
+        "Bloqueo tras 1 a 3 intentos fallidos": true
+      }
+    }
+  },
+  "resultado": {
+    "aprobados": 21,
+    "evaluados": 21,
+    "esperados": 21
+  }
+}

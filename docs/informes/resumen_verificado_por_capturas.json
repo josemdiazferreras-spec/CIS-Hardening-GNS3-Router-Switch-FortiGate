@@ -1,0 +1,37 @@
+{
+  "_aviso": "RESUMEN REDACTADO A PARTIR DE CAPTURAS; NO SUSTITUYE INFORMES JSON ORIGINALES DEL SCRIPT",
+  "laboratorio": "CIS Hardening GNS3",
+  "fecha_observada": "2026-11-10",
+  "alcance": "7 controles seleccionados por dispositivo; no es certificacion CIS",
+  "equipos": {
+    "R1": {
+      "ip": "10.6.94.1",
+      "antes": {
+        "cumple": 5,
+        "total": 7
+      },
+      "despues": {
+        "cumple": 7,
+        "total": 7
+      },
+      "ping_post": "5/5"
+    },
+    "SW": {
+      "ip": "10.6.94.2",
+      "antes": {
+        "cumple": 3,
+        "total": 7
+      },
+      "despues": {
+        "cumple": 7,
+        "total": 7
+      },
+      "ping_post": "5/5"
+    }
+  },
+  "informes_originales_pendientes_de_copiar": [
+    "auditar_20261110_202713.json",
+    "aplicar_20261110_203828.json",
+    "auditar_20261110_204226.json"
+  ]
+}

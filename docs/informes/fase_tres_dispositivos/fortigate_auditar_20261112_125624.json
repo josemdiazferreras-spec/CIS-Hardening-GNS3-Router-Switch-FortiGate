@@ -1,0 +1,18 @@
+{
+  "dispositivo": "FortiGate",
+  "ip": "10.6.94.3",
+  "modo": "auditar",
+  "fecha": "2026-11-12T12:56:24-05:00",
+  "alcance": "7 controles de laboratorio orientados a hardening; no certificación CIS",
+  "controles": {
+    "SSH versión 1 deshabilitado": true,
+    "Telnet administrativo global deshabilitado": false,
+    "Criptografía fuerte habilitada": false,
+    "Auditoría de comandos CLI habilitada": false,
+    "HTTP administrativo deshabilitado en port1": false,
+    "Tiempo de inactividad administrativo de 1 a 10 minutos": true,
+    "Bloqueo administrativo tras 1 a 3 intentos fallidos": true
+  },
+  "aprobados": 3,
+  "total": 7
+}

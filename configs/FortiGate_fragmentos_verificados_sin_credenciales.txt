@@ -1,0 +1,51 @@
+# FORTIGATE-VM64-KVM — FRAGMENTOS VERIFICADOS DEL LABORATORIO
+# NO es un respaldo completo ni un archivo running-config restaurable.
+# Origen: salidas CLI y pruebas compartidas por el estudiante, FortiOS 7.0.9.
+# No se publican contrasenas, hash, token, serial ni certificados privados.
+
+# Interfaces: configuracion observada y aplicada
+config system interface
+    edit "port1"
+        set ip 10.6.94.3 255.255.255.0
+        # acceso posterior al hardening: HTTP retirado; SSH y HTTPS conservados
+    next
+    edit "port2"
+        set ip 10.6.95.1 255.255.255.0
+        set allowaccess ping
+    next
+end
+
+# Objetos y politica verificadas en salida show firewall policy
+config firewall address
+    edit "PC1_10.6.95.10"
+        set subnet 10.6.95.10 255.255.255.255
+    next
+    edit "KALI_10.6.94.10"
+        set subnet 10.6.94.10 255.255.255.255
+    next
+end
+config firewall policy
+    edit 1
+        set name "PC1_A_KALI_SOLO_PING"
+        set srcintf "port2"
+        set dstintf "port1"
+        set action accept
+        set srcaddr "PC1_10.6.95.10"
+        set dstaddr "KALI_10.6.94.10"
+        set schedule "always"
+        set service "PING"
+        set logtraffic all
+        set nat enable
+    next
+end
+
+# Controles de hardening cuya efectividad fue comprobada mediante get system global
+config system global
+    set admin-telnet disable
+    set cli-audit-log enable
+    set ssl-static-key-ciphers disable
+end
+
+# Evidencia de comportamiento: trafico PC1→SW rechazado por policy 0.
+# Comando no disponible en esta instancia: set strong-crypto enable (error -61).
+# El control criptografico alternativo NO equivale al original.

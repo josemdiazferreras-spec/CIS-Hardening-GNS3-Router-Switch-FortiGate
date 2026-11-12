@@ -1,0 +1,12 @@
+digraph flow {
+ graph [bgcolor="white",rankdir=LR,pad="0.32",nodesep="0.30",ranksep="0.46",fontname="DejaVu Sans",label="CICLO DE AUDITORÍA Y HARDENING AUTOMATIZADO",fontsize=19,fontcolor="#152b45",labelloc=t];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,margin="0.17,0.13",color="#67819e",fillcolor="#eef4fc",penwidth=1.5];
+ edge [color="#64748b",arrowsize=0.7,penwidth=1.8];
+ A [label="Auditar sin cambios\nR1 y SW",fillcolor="#eaf2ff"];
+ B [label="Informe inicial\n8/14 conformes",fillcolor="#fff1e5",color="#dc9440"];
+ C [label="Confirmar APLICAR\nCambios autorizados",fillcolor="#e8ecf4"];
+ D [label="Hardening\nHTTP/HTTPS + timeouts",fillcolor="#eaf2ff"];
+ E [label="Reauditar\n14/14 conformes",fillcolor="#e3f5ed",color="#349a78"];
+ F [label="Probar conectividad\ny guardar configs",fillcolor="#e3f5ed",color="#349a78"];
+ A -> B -> C -> D -> E -> F;
+}

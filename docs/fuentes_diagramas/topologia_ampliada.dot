@@ -1,0 +1,17 @@
+digraph GNS3 {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.48", fontname="DejaVu Sans"];
+  node [shape=box, style="rounded,filled", color="#a8bbca", fillcolor="#eef5fa", fontcolor="#16314a", fontname="DejaVu Sans", fontsize=12, penwidth=1.4, margin="0.22,0.13"];
+  edge [color="#487b94", penwidth=2, fontname="DejaVu Sans", fontsize=10];
+  NAT [label="NAT1\nSalida externa"];
+  R1 [label="R1 · Cisco 7206VXR\nLAN 10.6.94.1/24", fillcolor="#e5f0ff"];
+  SW [label="SW · Cisco IOSvL2\nVLAN1 10.6.94.2/24", fillcolor="#e8f6f3"];
+  Kali [label="Kali / Linux-Auditor-1\n10.6.94.10/24", fillcolor="#f0f2f6"];
+  FW [label="FortiGate · FortiOS 7.0.9\nport1 10.6.94.3/24\nport2 10.6.95.1/24", fillcolor="#fff0e5", color="#e58b48"];
+  PC [label="PC1 · VPCS\n10.6.95.10/24", fillcolor="#f0f2f6"];
+  NAT -> R1 [label="WAN DHCP"];
+  R1 -> SW [label="Fa0/0 → Gi0/0"];
+  SW -> Kali [label="Gi0/1 → eth0"];
+  SW -> FW [label="Gi0/2 → port1"];
+  FW -> PC [label="port2 → eth0"];
+  {rank=same; Kali; FW;}
+}

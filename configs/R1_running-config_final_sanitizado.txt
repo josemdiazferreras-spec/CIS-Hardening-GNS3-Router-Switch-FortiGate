@@ -1,0 +1,79 @@
+! CIS HARDENING GNS3 - R1 running-config final (version sanitizada para GitHub)
+! Plataforma: Cisco 7206VXR, IOS 15.2(4)S6
+! Procedencia: salida show running-config aportada por el estudiante.
+! IMPORTANTE: Este archivo es evidencia documental, NO script listo para restaurar.
+! Se ha eliminado el hash de la contrasena del usuario auditor.
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+no ip domain lookup
+ip domain name laboratorio.local
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+!
+username auditor privilege 15 secret 5 <HASH_REDACTADO_NO_PUBLICAR>
+!
+ip tcp synwait-time 5
+ip ssh version 2
+!
+interface FastEthernet0/0
+ description CONEXION_A_SW
+ ip address 10.6.94.1 255.255.255.0
+ ip nat inside
+ duplex full
+!
+interface GigabitEthernet1/0
+ description CONEXION_A_NAT1
+ ip address dhcp
+ ip nat outside
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet4/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+ip nat inside source list 20 interface GigabitEthernet1/0 overload
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+access-list 20 permit 10.6.94.0 0.0.0.255
+!
+control-plane
+!
+line con 0
+ exec-timeout 5 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+end

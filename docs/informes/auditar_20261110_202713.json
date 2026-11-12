@@ -1,0 +1,74 @@
+{
+  "fecha": "2026-11-10T20:27:13",
+  "modo": "auditar",
+  "alcance": "Controles seleccionados de hardening Cisco IOS; no auditoría CIS certificada",
+  "nota": "No subir running-configs con hashes o credenciales a repositorios públicos.",
+  "dispositivos": {
+    "R1": {
+      "ip": "10.6.94.1",
+      "antes": {
+        "http_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTP administrativo deshabilitado"
+        },
+        "https_off": {
+          "cumple": true,
+          "detalle": "Servidor HTTPS administrativo deshabilitado (no requerido en este laboratorio)"
+        },
+        "console_timeout": {
+          "cumple": false,
+          "detalle": "Consola con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "vty_timeout": {
+          "cumple": false,
+          "detalle": "VTY con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "ssh_v2": {
+          "cumple": true,
+          "detalle": "SSH versión 2 habilitado"
+        },
+        "vty_ssh_only": {
+          "cumple": true,
+          "detalle": "Acceso remoto restringido a SSH"
+        },
+        "vty_local_login": {
+          "cumple": true,
+          "detalle": "VTY autenticada con usuarios locales"
+        }
+      }
+    },
+    "SW": {
+      "ip": "10.6.94.2",
+      "antes": {
+        "http_off": {
+          "cumple": false,
+          "detalle": "Servidor HTTP administrativo deshabilitado"
+        },
+        "https_off": {
+          "cumple": false,
+          "detalle": "Servidor HTTPS administrativo deshabilitado (no requerido en este laboratorio)"
+        },
+        "console_timeout": {
+          "cumple": false,
+          "detalle": "Consola con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "vty_timeout": {
+          "cumple": false,
+          "detalle": "VTY con tiempo de inactividad explícito (1-10 minutos)"
+        },
+        "ssh_v2": {
+          "cumple": true,
+          "detalle": "SSH versión 2 habilitado"
+        },
+        "vty_ssh_only": {
+          "cumple": true,
+          "detalle": "Acceso remoto restringido a SSH"
+        },
+        "vty_local_login": {
+          "cumple": true,
+          "detalle": "VTY autenticada con usuarios locales"
+        }
+      }
+    }
+  }
+}

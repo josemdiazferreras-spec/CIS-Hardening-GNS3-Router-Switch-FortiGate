@@ -1,0 +1,78 @@
+! CIS HARDENING GNS3 - SW running-config final (copia saneada para GitHub)
+! Plataforma: Cisco IOSvL2, IOS 15.2 experimental (2020)
+! Procedencia: show running-config aportado por el estudiante (11-nov-2026 UTC)
+! IMPORTANTE: copia documental, no un script de restauracion.
+! Hash de password y banners de licencia de la imagen omitidos deliberadamente.
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname SW
+!
+boot-start-marker
+boot-end-marker
+!
+username auditor privilege 15 secret 5 <HASH_REDACTADO_NO_PUBLICAR>
+no aaa new-model
+!
+ip domain-name laboratorio.local
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface GigabitEthernet0/0
+ negotiation auto
+!
+interface GigabitEthernet0/1
+ negotiation auto
+!
+interface GigabitEthernet0/2
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ negotiation auto
+!
+interface Vlan1
+ ip address 10.6.94.2 255.255.255.0
+!
+ip default-gateway 10.6.94.1
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+control-plane
+!
+! Banners exec/incoming/login presentes en la salida real;
+! texto legal de la imagen Cisco omitido (no se distribuye en este archivo).
+!
+line con 0
+ exec-timeout 5 0
+line aux 0
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+end

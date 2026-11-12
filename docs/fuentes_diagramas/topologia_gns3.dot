@@ -1,0 +1,12 @@
+digraph topology {
+ graph [bgcolor="white",rankdir=LR,pad="0.38",nodesep="0.65",ranksep="0.95",fontname="DejaVu Sans",label="LABORATORIO CIS HARDENING  |  TOPOLOGÍA DE GNS3",fontsize=21,fontcolor="#152b45",labelloc=t];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",penwidth=1.7,margin="0.24,0.17",fontsize=15];
+ edge [color="#70849a",penwidth=2.3,fontname="DejaVu Sans",fontsize=11,fontcolor="#334155",arrowsize=0.8];
+ NAT [label="NAT1\nSalida externa\nGW 192.168.42.1", fillcolor="#e9eff6",color="#8095ad"];
+ R1 [label="R1  |  Cisco 7206VXR\nLAN 10.6.94.1/24\nWAN 192.168.42.212 (DHCP)",fillcolor="#e6efff",color="#3d75c4"];
+ SW [label="SW  |  Cisco IOSvL2\nVLAN1 10.6.94.2/24",fillcolor="#e5f5f0",color="#2d9a80"];
+ KL [label="Kali  |  Linux Auditor\neth0 10.6.94.10/24\nPython + Netmiko",fillcolor="#fff2d9",color="#d29a37"];
+ NAT -> R1 [label="nat0  ↔  Gi1/0"];
+ R1 -> SW [label="Fa0/0  ↔  Gi0/0"];
+ SW -> KL [label="Gi0/1  ↔  eth0"];
+}

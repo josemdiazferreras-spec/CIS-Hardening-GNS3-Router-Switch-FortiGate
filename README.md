@@ -92,22 +92,6 @@ python scripts/cis_tres_dispositivos.py auditar
 
 [**Leer cronología y explicación técnica completa**](docs/RESULTADOS_COMPARATIVOS_3_DISPOSITIVOS.md) · [**Ver los 5 informes auténticos de la nueva fase**](docs/informes/fase_tres_dispositivos/).
 
-## 7. Evidencias, configuraciones y documentación
-
-| Recurso | Contenido |
-|---|---|
-| [Documentación técnica ACTUALIZADA en Word](docs/Documento_Tecnico_CIS_Hardening_3_Dispositivos.docx) | Informe integral extenso con capturas, scripts, configuraciones y anexos de los tres dispositivos |
-| [Resumen técnico en PDF](docs/Documento_Tecnico_CIS_Hardening_3_Dispositivos.pdf) | Resumen complementario; el documento Word es el informe integral |
-| [Documento técnico Cisco original en Word](docs/Documento_Tecnico_CIS_Hardening_Jose_Miguel_Diaz_Ferreras.docx) | Original completo, sin modificaciones |
-| [Documento técnico Cisco original en PDF](docs/Documento_Tecnico_CIS_Hardening_Jose_Miguel_Diaz_Ferreras.pdf) | Original completo, sin modificaciones |
-| [TODAS las evidencias en una sola carpeta](images/evidencias/) | Capturas originales Cisco, FortiGate, topología final, diagramas y auditoría de demostración 16/21 |
-| [Running-config R1 saneado](configs/R1_running-config_final_sanitizado.txt) | Configuración Cisco sin hashes |
-| [Running-config SW saneado](configs/SW_running-config_final_sanitizado.txt) | Configuración Cisco sin hashes |
-| [Extractos FortiGate verificados](configs/FortiGate_fragmentos_verificados_sin_credenciales.txt) | Configuración documentada de interfaces, objetos, política y hardening; no backup integral |
-| [Matriz de requisitos actualizada](docs/MATRIZ_REQUISITOS_ACTUALIZADA.md) | Estado de cada requisito y pendientes |
-| [Guion del video completo](docs/GUION_VIDEO_COMPLETO_3_DISPOSITIVOS.md) | Narración completa de ~8 minutos y pantalla sugerida |
-| [Cómo subir a GitHub NUEVO](docs/GUIA_NUEVO_REPOSITORIO_GITHUB.md) | Instrucciones para crear el repositorio sin borrar el anterior |
-
 
 
 

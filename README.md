@@ -90,10 +90,6 @@ python scripts/cis_tres_dispositivos.py auditar
 
 ![Auditoría final 21 de 21](images/evidencias/fortigate_07_auditoria_final_tres_dispositivos_21_21.png)
 
-### Incidencia criptográfica: transparencia en el informe
-
-La VM FortiGate mostró `strong-crypto: disable` y **rechazó** `set strong-crypto enable` con **`command parse error` / código -61**. Por lo tanto, **NO se afirma que `strong-crypto` esté habilitado**. En su lugar se aplicó y comprobó `ssl-static-key-ciphers disable`. En la **matriz final actualizada** se sustituyó el control original por ese otro, que **no es equivalente**. Por eso se conservan los informes de **17/21 y 20/21 con matriz inicial** y el de **21/21 con matriz revisada**. El 21/21 no debe compararse como cumplimiento de exactamente los mismos 21 controles que en el primer reporte.
-
 [**Leer cronología y explicación técnica completa**](docs/RESULTADOS_COMPARATIVOS_3_DISPOSITIVOS.md) · [**Ver los 5 informes auténticos de la nueva fase**](docs/informes/fase_tres_dispositivos/).
 
 ## 7. Evidencias, configuraciones y documentación

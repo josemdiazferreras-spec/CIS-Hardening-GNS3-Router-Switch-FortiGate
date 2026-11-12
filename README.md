@@ -2,8 +2,6 @@
 
 ## 🎥 Video demostrativo de los TRES dispositivos
 
-**⏳ PENDIENTE DE GRABAR Y PUBLICAR.** Al subir el nuevo video, colocar **aquí arriba** el enlace de YouTube (duración máxima de 10 minutos, con rostro, voz y fecha/hora). Guion detallado: **[VER GUION DEL VIDEO COMPLETO](docs/GUION_VIDEO_COMPLETO_3_DISPOSITIVOS.md)**.
-
 **Video histórico de la etapa Cisco R1 + SW (no incluye FortiGate):** https://youtu.be/4RRuTz3-xdg. Se conserva como evidencia anterior, pero **no reemplaza el nuevo video**.
 
 **Estudiante:** José Miguel Díaz Ferreras  

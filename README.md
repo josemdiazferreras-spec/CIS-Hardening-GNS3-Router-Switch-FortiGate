@@ -10,15 +10,12 @@
 
 > Laboratorio académico con controles **seleccionados** de hardening inspirados en criterios CIS. Los porcentajes corresponden a **esta matriz de controles**, no a una certificación CIS Benchmark general.
 
-> **Organización de las imágenes:** todas las capturas y diagramas PNG están en una única carpeta: [`images/evidencias/`](images/evidencias/). Subir el contenido de este ZIP a la raíz del repositorio, sin crear una carpeta adicional. Los enlaces de esta página se comprobaron.
 
 ![Topología real GNS3, router, switch, firewall, Kali y PC1](images/evidencias/fortigate_01_topologia_gns3_router_switch_fortigate_pc_kali.png)
 
 ## 1. Propósito y alcance
 
 **Documentar una sola infraestructura completa: R1 Cisco, SW Cisco, FortiGate, Kali y PC1**, con segmentación de redes, políticas de filtrado, pruebas de tráfico permitido y rechazado, y auditoría/hardening automatizados. Se preservan sin alteraciones todos los scripts, informes y evidencias de las auditorías anteriores de R1 y SW.
-
-**Las evidencias del hardening Cisco se conservaron íntegramente.** El README anterior completo está en [**README_CISCO_SW_ORIGINAL.md**](README_CISCO_SW_ORIGINAL.md), con la misma estructura y enlaces, y todos los archivos siguen incluidos. Para evitar enlaces rotos se unificaron las imágenes en `images/evidencias/`, manteniendo sus capturas originales sin cambios de contenido.
 
 ## 2. Arquitectura
 
@@ -32,7 +29,6 @@
 | PC1 VPCS | 10.6.95.10/24 | Pruebas de control de acceso |
 | R1 Gi1/0 (WAN) | DHCP vía NAT1 | Salida externa |
 
-La **única topología de referencia del proyecto** comprende NAT1→R1→SW, con Kali y FortiGate conectados al switch; PC1 queda en la red protegida por FortiGate: SW Gi0/2→FortiGate port1→port2→PC1. Los resultados anteriores de Cisco se conservan como pruebas documentales de esos dispositivos, sin presentar una topología distinta en este informe integrado.
 
 ## 3. Router R1 y Switch SW — auditoría y hardening
 

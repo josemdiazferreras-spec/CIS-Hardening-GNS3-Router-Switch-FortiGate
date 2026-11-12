@@ -75,9 +75,8 @@ Desde la raíz del repositorio, en un entorno con acceso y permiso a los equipos
 python scripts/cis_tres_dispositivos.py auditar
 ```
 
-El modo de aplicación (`python scripts/cis_tres_dispositivos.py aplicar`) **cambia configuraciones reales** y solo debe ejecutarse sobre el laboratorio propio, con copia de seguridad y autorización. **No hace falta volver a aplicar** en dispositivos ya endurecidos; para el video puede mostrarse el informe histórico y ejecutar solo lectura.
 
-## 6. Resultados reales y comparación temporal
+## 6. Resultados y comparación 
 
 ![Evolución del laboratorio](images/evidencias/diagrama_flujo_tres_dispositivos.png)
 
@@ -113,14 +112,6 @@ La VM FortiGate mostró `strong-crypto: disable` y **rechazó** `set strong-cryp
 | [Guion del video completo](docs/GUION_VIDEO_COMPLETO_3_DISPOSITIVOS.md) | Narración completa de ~8 minutos y pantalla sugerida |
 | [Cómo subir a GitHub NUEVO](docs/GUIA_NUEVO_REPOSITORIO_GITHUB.md) | Instrucciones para crear el repositorio sin borrar el anterior |
 
-## 8. Precauciones, alcance y pendientes
 
-- Material de simulación académica, **no certificación CIS** ni configuración recomendada sin adaptación a producción.
-- Los algoritmos de compatibilidad SSH con IOS antiguo representan una excepción del laboratorio; no recomendamos degradar seguridad real.
-- No se incluyen contraseñas, secretos, claves privadas ni imágenes propietarias de Cisco/Fortinet. Revisa cualquier archivo nuevo antes de publicarlo.
-- **La evidencia de FortiGate no es un `running-config` integral**; los fragmentos verificados están claramente etiquetados.
-- **Video nuevo pendiente**: el enlace del video viejo es únicamente de Cisco. Grabar el nuevo con [el guion](docs/GUION_VIDEO_COMPLETO_3_DISPOSITIVOS.md), publicarlo en YouTube y ponerlo al comienzo del README.
 
----
 
-**Licencia/aclaración:** Este repositorio documenta una práctica GNS3 autorizada y no incorpora firmware de fabricantes ni materiales restringidos.

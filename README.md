@@ -44,9 +44,6 @@ Se configuró el acceso SSHv2 para R1 y SW, con autenticación local, VTY restri
 
 ![Auditoría posterior Cisco 14 de 14](images/evidencias/cisco_09_auditoria_final_14_de_14.png)
 
-**Pruebas preservadas sin borrar:** capturas de Cisco (prefijo `cisco_`) en [`images/evidencias/`](images/evidencias/), acceso Netmiko router y switch, evidencia de autorización, aplicación automática a R1/SW y ping final Kali→R1, Kali→SW de 5/5 respuestas. Permanecen igualmente los JSON auténticos en [`docs/informes/`](docs/informes/), el script original [`scripts/cis_hardening.py`](scripts/cis_hardening.py) y las copias saneadas de configuración en [`configs/`](configs/).
-
-Material de archivo Cisco, conservado sin cambios: [Word original](docs/Documento_Tecnico_CIS_Hardening_Jose_Miguel_Diaz_Ferreras.docx) · [PDF original](docs/Documento_Tecnico_CIS_Hardening_Jose_Miguel_Diaz_Ferreras.pdf) · [documento técnico original](docs/DOCUMENTO_TECNICO.md) · [README original](README_CISCO_SW_ORIGINAL.md).
 
 ## 4. Firewall FortiGate — configuración y pruebas de filtrado
 

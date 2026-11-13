@@ -2,7 +2,7 @@
 
 ## 🎥 Video demostrativo de los TRES dispositivos
 
-**Video histórico de la etapa Cisco R1 + SW (no incluye FortiGate):** https://youtu.be/4RRuTz3-xdg. Se conserva como evidencia anterior, pero **no reemplaza el nuevo video**.
+**Video :** https://youtu.be/Tyjx94_pSSA?si=VpJnf7BBDm_CCM_c
 
 **Estudiante:** José Miguel Díaz Ferreras  
 **Matrícula:** `2025-0693`  
